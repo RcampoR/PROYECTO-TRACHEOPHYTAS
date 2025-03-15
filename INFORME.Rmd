@@ -1,0 +1,17 @@
+---
+title: "INFORME TRACHEOPHYTAS"
+author: "Ronaldo Campo"
+date: "2025-03-14"
+location: "Córdoba, Colombia"
+output: html_document
+---
+
+# DIVISIÓN TRACHEOPHYTA, EN EL CONTEXTO DEL APORTE DE LA UNIVERSIDAD DE CÓRDOBA
+
+### DISTRIBUCION EN EL MUNDO
+
+En el mundo se han reportado 488.229 especies de plantas vasculares (Tracheophyta in Döring, 2023)
+
+# REFERENCIAS
+
+Tracheophyta in Döring M (2023). GBIF Backbone Patch. GBIF Secretariat. Checklist dataset <https://doi.org/10.15468/l07d61> accessed via GBIF.org on 2025-03-14.
