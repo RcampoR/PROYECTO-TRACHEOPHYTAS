@@ -5,13 +5,35 @@ date: "2025-03-14"
 location: "Córdoba, Colombia"
 output: html_document
 linkcitation: TRUE 
+bibliography: references.bib
 ---
 
 # DIVISIÓN TRACHEOPHYTA, EN EL CONTEXTO DEL APORTE DE LA UNIVERSIDAD DE CÓRDOBA
 
+
 ### DISTRIBUCION EN EL MUNDO
 
-En el mundo se han reportado 488.229 especies de plantas vasculares (Tracheophyta in Döring, 2023)
+En el mundo se han reportado **488.229 especies** de plantas vasculares, donde su abundancia diminuye gradualmente al aproximarse a los polos (Tracheophyta in Döring, 2023.[@gbif.orguser2025]
+
+
+##TRACHEOPHYTA EN COLOMBIA
+
+En Colombia se tienen registros oficiales (bases de datos GBIF Y SIB Colombia) de 34721 especies pertenecientes a 8 clases conocidas [@gbif.orguser2025a].
+
+
+```{r Grafica de Clases, echo=FALSE}
+clases_riqueza %>% 
+  ggplot(aes(x= reorder(class, desc(n_especies)), y= n_especies), fill = "gray") +
+  geom_col() +
+  theme_classic() +
+  labs(x = "Clase",
+       y = "Número de Especies") +
+  theme(axis.text.x = element_text(family = "Arial",
+                                    angle = 45,
+                                    hjust = 1))
+```
+
+
 
 # REFERENCIAS
 

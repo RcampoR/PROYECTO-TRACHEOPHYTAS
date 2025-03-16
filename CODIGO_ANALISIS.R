@@ -1,8 +1,4 @@
-library(readr)
-library(tibble)
-library(dplyr)
-library(ggplot2)
-library(tidyverse)
+library(readr)library(tidyverse)
 
 file.choose()
 
@@ -25,16 +21,41 @@ clases_riqueza <- BASE_ORIGINAL %>%
 
 
 clases_riqueza %>% 
-  pivot_wider(names_from = class,
-              values_from = n_especies) %>% 
-  ggplot() +
-  geom_bar(aes(Cycadopsida:Magnoliopsida))
-  
+  ggplot(aes(x= reorder(class, desc(n_especies)), y= n_especies), fill = "gray") +
+  geom_col() +
+  theme_classic() +
+  labs(x = "Clase",
+       y = "Número de Especies") +
+  theme(axis.text.x = element_text(family = "Arial",
+                                    angle = 45,
+                                    hjust = 1))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 clases_riqueza %>% 
-  pivot_wider(names_from = class,
-              values_from = n_especies) %>% 
-  ggplot() +
-  geom_bar(aes(Cycadopsida:Magnoliopsida))
-
+  ggplot(aes(x = class, y = n_especies)) +
+  geom_col() +  # geom_col es como geom_bar pero con y ya calculada
+  labs(
+    title = "Número de especies por clase",
+    x = "Clase",
+    y = "Número de especies"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Para que las etiquetas no se superpongan
 
