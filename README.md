@@ -28,7 +28,7 @@ El análisis indica que la Universidad de Córdoba contribuye con un **28.64%** 
 
 Este proyecto ha sido desarrollado por **Ronaldo David Campo Romero**. Si reutilizas o te basas en este trabajo, por favor, reconoce la autoría de la siguiente manera:
 
-> Campo Romero, R. D. (2025). División Tracheophyta, en el contexto del aporte de la Universidad de Córdoba para el Departamento. Repositorio en GitHub: [URL_del_repositorio].
+> Campo Romero, R. D. (2025). División Tracheophyta, en el contexto del aporte de la Universidad de Córdoba para el Departamento. Repositorio en GitHub: https://github.com/RcampoR/PROYECTO-TRACHEOPHYTAS.
 
 ## Licencia
 
