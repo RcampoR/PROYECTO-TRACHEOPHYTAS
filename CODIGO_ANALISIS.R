@@ -1,4 +1,5 @@
-library(readr)library(tidyverse)
+library(readr)
+library(tidyverse)
 
 file.choose()
 
@@ -6,6 +7,7 @@ BASE_ORIGINAL <- read_delim("C:\\Proyectos Actuales\\TAREA TRACHEOPHYTAS\\bases 
 
 
 # NUMERO DE ESPECIES DE PLANTAS VASCULARES EN COLOMBIA 
+
 BASE_ORIGINAL %>%
   filter(!is.na(species)) %>% 
   summarise(Total_Colombia = n_distinct(species))
@@ -31,31 +33,18 @@ clases_riqueza %>%
                                     hjust = 1))
 
 
+#ESPECIES EN CÓRDOBA
+
+BASE_ORIGINAL %>%  
+  filter(stateProvince == "Córdoba") %>% 
+  group_by(stateProvince) %>% 
+  summarise(n_especies = n_distinct(species, na.rm = TRUE))
 
 
+#ESPECIES REPORTADAS POR LA UNIVERSIDAD DE CÓRDOBA
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-clases_riqueza %>% 
-  ggplot(aes(x = class, y = n_especies)) +
-  geom_col() +  # geom_col es como geom_bar pero con y ya calculada
-  labs(
-    title = "Número de especies por clase",
-    x = "Clase",
-    y = "Número de especies"
-  ) +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Para que las etiquetas no se superpongan
-
+BASE_ORIGINAL %>%  
+  filter(stateProvince == "Córdoba" & institutionCode == "UNICORDOBA") %>% 
+  group_by(stateProvince) %>% 
+  summarise(n_especies = n_distinct(species, na.rm = TRUE))
+  

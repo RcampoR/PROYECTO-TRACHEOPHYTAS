@@ -10,16 +10,13 @@ bibliography: references.bib
 
 # DIVISIÓN TRACHEOPHYTA, EN EL CONTEXTO DEL APORTE DE LA UNIVERSIDAD DE CÓRDOBA
 
-
 ### DISTRIBUCION EN EL MUNDO
 
 En el mundo se han reportado **488.229 especies** de plantas vasculares, donde su abundancia diminuye gradualmente al aproximarse a los polos (Tracheophyta in Döring, 2023.[@gbif.orguser2025]
 
-
-##TRACHEOPHYTA EN COLOMBIA
+## TRACHEOPHYTA EN COLOMBIA
 
 En Colombia se tienen registros oficiales (bases de datos GBIF Y SIB Colombia) de 34721 especies pertenecientes a 8 clases conocidas [@gbif.orguser2025a].
-
 
 ```{r Grafica de Clases, echo=FALSE}
 clases_riqueza %>% 
@@ -33,8 +30,13 @@ clases_riqueza %>%
                                     hjust = 1))
 ```
 
+### TRACHEOPHYTA EN CÓRDOBA Y EL APORTE DE LA UNIVERSIDAD DE CÓRDOBA
+
+En córdoba hay reportadas **2011 especies** de plantas vasculares, de las cuales **576 provienen del aporte directo de investigadores en la Universidad de Córdoba**, siendo al menos 500 especies tipicas de bosque seco tropical (Vega, 2023).
 
 
 # REFERENCIAS
+
+Ruiz Vega, R. (2023). Flora relictual del bosque seco tropical (bst) del departamento de Córdoba. Fondo Editorial - Universidad de Córdoba.
 
 Tracheophyta in Döring M (2023). GBIF Backbone Patch. GBIF Secretariat. Checklist dataset <https://doi.org/10.15468/l07d61> accessed via GBIF.org on 2025-03-14.
