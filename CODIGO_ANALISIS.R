@@ -21,7 +21,7 @@ clases_riqueza <- BASE_ORIGINAL %>%
   summarise(n_especies = n_distinct(species, na.rm = TRUE)) 
 
 
-
+#GRAFICA DE CLASES
 clases_riqueza %>% 
   ggplot(aes(x= reorder(class, desc(n_especies)), y= n_especies), fill = "gray") +
   geom_col() +
