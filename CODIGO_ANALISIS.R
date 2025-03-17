@@ -48,3 +48,5 @@ BASE_ORIGINAL %>%
   group_by(stateProvince) %>% 
   summarise(n_especies = n_distinct(species, na.rm = TRUE))
   
+(576/2011)*100
+488229

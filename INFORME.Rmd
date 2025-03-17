@@ -1,12 +1,12 @@
 ---
-title: "DIVISIÓN TRACHEOPHYTA, EN EL CONTEXTO DEL APORTE DE LA UNIVERSIDAD DE CÓRDOBA"
+title: "DIVISIÓN TRACHEOPHYTA, EN EL CONTEXTO DEL APORTE DE LA UNIVERSIDAD DE CÓRDOBA PARA EL DEPARTAMENTO"
 author: "Ronaldo David Campo Romero"
-date: "2025-03-14" 
-location: "Córdoba, Colombia"
-output: html_document
+date: "2025-03-14"
+output:
+  html_document: default
+  pdf_document: default
+location: Córdoba, Colombia
 ---
-
-# DIVISIÓN TRACHEOPHYTA, EN EL CONTEXTO DEL APORTE DE LA UNIVERSIDAD DE CÓRDOBA
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 library(tidyverse)
@@ -14,13 +14,13 @@ library(tidyverse)
 
 ------------------------------------------------------------------------
 
-### DISTRIBUCION EN EL MUNDO
+### DISTRIBUCIÓN EN EL MUNDO
 
-En el mundo se han reportado **488,229 especies** de plantas vasculares, donde su abundancia diminuye gradualmente al aproximarse a los polos (Tracheophyta in Döring, 2023).
+En el mundo se ha reportado un total de **488,229 especies** de plantas vasculares, donde su abundancia disminuye gradualmente al aproximarse a los polos (Tracheophyta in Döring, 2023).
 
 ------------------------------------------------------------------------
 
-## TRACHEOPHYTA EN COLOMBIA
+### TRACHEOPHYTA EN COLOMBIA
 
 En Colombia se tiene registros oficiales (bases de datos GBIF Y SIB Colombia) de 34,721 especies pertenecientes a ocho clases conocidas (Tracheophyta in Döring, 2023).
 
@@ -36,7 +36,7 @@ clases_riqueza <- BASE_ORIGINAL %>%
   summarise(n_especies = n_distinct(species, na.rm = TRUE)) 
 
 
-
+#GRAFICA DE CLASES
 clases_riqueza %>% 
   ggplot(aes(x= reorder(class, desc(n_especies)), y= n_especies), fill = "gray") +
   geom_col() +
@@ -56,14 +56,13 @@ En córdoba hay reportadas **2,011 especies** de plantas vasculares, de las cual
 
 ------------------------------------------------------------------------
 
-# CONCLUSION 
+### CONCLUSIÓN
 
-  En base a las consultas
+Debido a las consultas realizadas en las base de datos provenientes de diferentes investigaciones, se concluye que **la universidad de Córdoba genera un aporte del 28.64%** al conocimiento taxonómico de plantas vasculares en el departamento de Córdoba, en su mayoria especimenes pertenecientes al ecosistema de bosque seco tropical.
 
+------------------------------------------------------------------------
 
-
-
-# REFERENCIAS
+### REFERENCIAS
 
 Ruiz Vega, R. (2023). Flora relictual del bosque seco tropical (bst) del departamento de Córdoba. Fondo Editorial - Universidad de Córdoba.
 
